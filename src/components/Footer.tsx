@@ -1,8 +1,11 @@
+import React from "react";
 import { InstagramIcon } from "./icons/InstagramIcon";
 import { FacebookIcon } from "./icons/FacebookIcon";
 import { TikTokIcon } from "./icons/TikTokIcon";
 import { YoutubeIcon } from "./icons/YouTubeIcon";
 import { TwitterIcon } from "./icons/TwitterIcon";
+import cevLogo from "../assets/cev.png";
+import fivbLogo from "../assets/FIVB.png";
 
 function Footer() {
     return (
@@ -17,12 +20,12 @@ function Footer() {
                         </li>
                         <li>
                             <a href="https://www.facebook.com/CeskyVolejbalovySvaz">
-                                <FacebookIcon size={24} />
+                                <FacebookIcon size={20} />
                             </a>
                         </li>
                         <li>
                             <a href="https://www.tiktok.com/explore">
-                                <TikTokIcon size={20} />
+                                <TikTokIcon size={18} />
                             </a>
                         </li>
                         <li>
@@ -32,25 +35,25 @@ function Footer() {
                         </li>
                         <li>
                             <a href="https://x.com/czechvolleyball">
-                                <TwitterIcon size={24} />
+                                <TwitterIcon size={20} />
                             </a>
                         </li>
                         <li>
                             <a href="https://www.cev.eu">
                                 <img
-                                    src="src/assets/cev.png"
+                                    src={cevLogo}
                                     alt="CEV logo"
                                     className="h-8"
-                                ></img>
+                                />
                             </a>
                         </li>
                         <li>
                             <a href="https://www.fivb.com">
                                 <img
-                                    src="src/assets/FIVB.png"
+                                    src={fivbLogo}
                                     alt="FIVB logo"
                                     className="h-16"
-                                ></img>
+                                />
                             </a>
                         </li>
                     </ul>
@@ -61,9 +64,7 @@ function Footer() {
                             </a>
                         </li>
                         <li>
-                            <a href="mailto:holytom5@fel.cvut.cz">
-                                Kontakt
-                            </a>
+                            <a href="mailto:holytom5@fel.cvut.cz">Kontakt</a>
                         </li>
                         <li>
                             <a href="mailto:holytom5@fel.cvut.cz">
