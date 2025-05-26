@@ -1,13 +1,27 @@
 import { Link } from "react-router-dom";
 
 function Navigation() {
-  return (
-    <ul>
-      <li><a href="https://www.cvf.cz">ČVS</a></li>
-      <li>{<Link to="/matches/">Zapsat zápas</Link>}</li>
-      <li>{<Link to="/matches/">Zápasy</Link>}</li>
-    </ul>
-  );
+    return (
+        <nav className="fixed top-0 left-0 right-0 bg-primary p-4">
+            <ul className="flex items-center gap-8 tracking-wide [&>li_*]:(font-medium text-3xl text-white/90 transition-all duration-300)">
+                <li>
+                    <a href="https://www.cvf.cz" className="flex items-center">
+                        <img
+                            src="src/assets/cesky-volejbal.png"
+                            alt="logo českého volejbalu"
+                            className="h-10 hover:scale-110 transition-transform duration-300"
+                        ></img>
+                    </a>
+                </li>
+                <li className="items-center">
+                    {<Link to="/matches/" className="relative after:absolute after:bg-white after:h-[2px] after:w-0 after:-bottom-1 after:left-0 hover:after:w-full after:transition-all after:duration-300 hover:text-white hover:translate-y-[-2px] rounded-md px-2 py-1">Zapsat zápas</Link>}
+                </li>
+                <li className="items-center">
+                    {<Link to="/matches/" className="relative after:absolute after:bg-white after:h-[2px] after:w-0 after:-bottom-1 after:left-0 hover:after:w-full after:transition-all after:duration-300 hover:text-white hover:translate-y-[-2px] rounded-md px-2 py-1">Zápasy</Link>}
+                </li>
+            </ul>
+        </nav>
+    );
 }
 
 export default Navigation;
