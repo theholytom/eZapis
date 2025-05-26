@@ -1,18 +1,15 @@
-import Footer from "../components/Footer";
-import Navigation from "../components/Navigation";
 import Statistics from "../components/StatisticsCard";
 import TopMatchesCard from "../components/TopMachesCard";
+import Layout from "../components/Layout";
+
 
 function Homepage() {
-  return (
-    <>
-      <Navigation />
-      <h1>Homepage</h1>
-      <TopMatchesCard />
-      <Statistics />
-      <Footer />
-    </>
-  );
+    return (
+        <Layout>
+            <TopMatchesCard />
+            <Statistics />
+        </Layout>
+    );
 }
 
 export default Homepage;

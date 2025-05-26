@@ -1,5 +1,11 @@
+import Layout from "../components/Layout";
+
 function MatchesPage() {
-    return <div></div>;
+    return (
+        <Layout>
+            <h1>Matches</h1>
+        </Layout>
+    );
 }
 
 export default MatchesPage;
