@@ -3,7 +3,7 @@ import { Button } from "../ui/button";
 function SwitchSidesButton() {
     return (
         <div className="flex justify-center">
-            <Button className="bg-white h-12 w-12 hover:bg-secondary transition-colors m-8 group">
+            <Button className="bg-white h-12 w-12 hover:bg-secondary transition-colors m-5 group">
                 <svg
                     viewBox="0 0 24 24"
                     fill="none"

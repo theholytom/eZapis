@@ -1,20 +1,32 @@
+import type { cn } from "lib/utils";
 import { Button } from "./ui/button";
 
-interface TeamleftProps {
+interface TeamLeftProps {
     name: string;
-    score?: number;
-    sets?: number;
+    score: number;
+    sets: number;
+    TOcount: number;
 }
 
-function TeamLeft({ name, score = 25, sets = 3 }: TeamleftProps) {
+function TeamLeft({ name, score = 0, sets = 0 , TOcount = 0}: TeamLeftProps) {
+
+    let toClassName;
+    if (TOcount === 0) {
+        toClassName = "text-chart-2"
+    } else if (TOcount === 1) {
+        toClassName = "[&>p:first-child]:text-chart-2 [&>p:nth-child(2)]:text-chart-5"
+    } else {
+        
+        toClassName = "text-chart-5"
+    }
     return (
-        <div className="flex items-center gap-5">
-            <p className="text-5xl text-primary-foreground">{name}</p>
-            <div className="flex-col justify-center">
+        <div className="flex items-center gap-6 max-w-[600px] min-w-[400px] w-full justify-end">
+            <p className="text-5xl text-primary-foreground truncate">{name}</p>
+            <div>
                 <Button className="bg-primary-foreground pointer-events-none h-12 w-12 text-3xl text-primary">
                     {sets}
                 </Button>
-                <div className="flex justify-center gap-3 text-chart-2 pt-3 text-3xl">
+                <div className={`flex gap-3 pt-3 text-3xl font-bold ${toClassName}`}>
                     <p>T</p>
                     <p>T</p>
                 </div>
