@@ -1,11 +1,12 @@
+import FavoriteAccordions from "@/components/FavoriteAccoridons";
 import Layout from "../components/Layout";
 
 function FavoritePage() {
     return (
         <Layout>
-            <h1>Oblíbené</h1>
+            <FavoriteAccordions />
         </Layout>
-    )
+    );
 }
 
-export default FavoritePage
+export default FavoritePage;
