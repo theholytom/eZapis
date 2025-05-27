@@ -1,4 +1,3 @@
-import React from "react";
 import { InstagramIcon } from "./icons/InstagramIcon";
 import { FacebookIcon } from "./icons/FacebookIcon";
 import { TikTokIcon } from "./icons/TikTokIcon";
@@ -9,7 +8,7 @@ import fivbLogo from "../assets/FIVB.png";
 
 function Footer() {
     return (
-        <footer className="fixed bottom-0 left-0 right-0 bg-primary p-4">
+        <footer className="bg-primary p-4 mt-auto">
             <div className="container mx-auto">
                 <div className="flex justify-between px-8 mb-4">
                     <ul className="flex gap-6 [&>li]:text-white items-center [&_svg]:hover:scale-125 [&_svg]:transition-transform [&_img]:hover:scale-110 [&_img]:transition-transform">
