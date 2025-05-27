@@ -13,7 +13,7 @@ interface MatchCardProps {
 
 export default function MatchCard({ team1, team2, time }: MatchCardProps) {
     return (
-        <Card className="bg-foreground text-background flex-column min-w-[300px]">
+        <Card className="bg-chart-1 text-primary-foreground flex-column min-w-[300px]">
             <CardHeader>
                 <CardTitle className="whitespace-nowrap">
                     {team1} vs {team2}

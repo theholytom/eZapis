@@ -12,7 +12,7 @@ interface StaticticCardProps {
 
 export default function StaticticCard({ title, value }: StaticticCardProps) {
     return (
-        <Card className="bg-foreground text-background flex-column min-w-[300px]">
+        <Card className="bg-chart-1 text-primary-foreground flex-column min-w-[300px]">
             <CardHeader>
                 <CardTitle className="whitespace-nowrap">
                     {title}
