@@ -8,6 +8,8 @@ import MatchesPage from "./pages/MatchesPage";
 import MatchViewPage from "./pages/MatchViewPage";
 import MatchEditPage from "./pages/MatchEditPage";
 import FavoritePage from "./pages/FavoritePage";
+import LoginPage from "./pages/LoginPage";
+import RegisterPage from "./pages/RegisterPage";
 
 const router = createBrowserRouter([
     {
@@ -28,9 +30,17 @@ const router = createBrowserRouter([
         element: <MatchEditPage />,
     },
     {
-      path: "/favorite",
-      element: <FavoritePage />,
-  },
+        path: "/favorite",
+        element: <FavoritePage />,
+    },
+    {
+        path: "/login",
+        element: <LoginPage />,
+    },
+    {
+        path: "/register",
+        element: <RegisterPage />,
+    },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
