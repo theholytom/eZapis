@@ -37,10 +37,10 @@ function RegisterForm() {
     const hadnleShowPassword = () => setShowPassword((prev) => !prev);
 
     return (
-        <div className="flex min-h-screen items-center justify-center">
+        <div className="flex min-h-screen items-center justify-center bg-gradient-to-tr from-[var(--chart-1)] to-white">
             <form
                 onSubmit={handleSubmit(onSubmit)}
-                className="bg-primary text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm w-[450px]"
+                className="bg-primary text-card-foreground flex flex-col gap-6 rounded-xl py-6 shadow-sm w-[450px]"
             >
                 <div className="grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-6">
                     <div className="leading-none font-semibold">
