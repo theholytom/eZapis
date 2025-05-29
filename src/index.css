@@ -104,3 +104,18 @@
     --shadow-xl: var(--shadow-xl);
     --shadow-2xl: var(--shadow-2xl);
   }
+
+.edit-button {
+    background-color: var(--color-primary-foreground);
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    font-weight: 700;
+    width: 150px;
+    min-height: 100px;
+    white-space: normal;
+}
+
+.edit-button:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-primary-foreground);
+}
