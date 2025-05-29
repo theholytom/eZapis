@@ -43,48 +43,54 @@ function MatchEditPage() {
             .fill(null)
             .map(() => ({ team1: 0, team2: 0 }))
     );
-    const [leftTOCount, setLeftTOCount] = useState(0)
-    const [rightTOCount, setRightTOCount] = useState(0)
+    const [leftTOCount, setLeftTOCount] = useState(0);
+    const [rightTOCount, setRightTOCount] = useState(0);
 
     const handleLeftTO = () => {
         setLeftTOCount((prev) => {
-            const newTOCount = prev + 1
+            const newTOCount = prev + 1;
             if (newTOCount > 2) {
-                return 2
+                return 2;
             }
-            return newTOCount
-        })
-    }
+            return newTOCount;
+        });
+    };
 
     const handleRightTO = () => {
         setRightTOCount((prev) => {
-            const newTOCount = prev + 1
+            const newTOCount = prev + 1;
             if (newTOCount > 2) {
-                return 2
+                return 2;
             }
-            return newTOCount
-        })
+            return newTOCount;
+        });
+    };
+
+    function isTooMuchSets(): boolean {
+        return leftSets + rightSets >= 5;
     }
 
     const handleLeftScoreIncrement = () => {
-        const newLeftScore = leftScore + 1;
-        if (newLeftScore >= 25 && newLeftScore - rightScore >= 2) {
-            setSetScores((prev) => {
-                const newScores = [...prev];
-                newScores[setNum - 1] = {
-                    team1: newLeftScore,
-                    team2: rightScore,
-                };
-                return newScores;
-            });
-            setLeftSets((prev) => prev + 1);
-            setSetNum((prev) => prev + 1);
-            setLeftScore(0);
-            setRightScore(0);
-            setLeftTOCount(0)
-            setRightTOCount(0)
-        } else {
-            setLeftScore(newLeftScore);
+        if (!isTooMuchSets()) {
+            const newLeftScore = leftScore + 1;
+            if (newLeftScore >= 25 && newLeftScore - rightScore >= 2) {
+                setSetScores((prev) => {
+                    const newScores = [...prev];
+                    newScores[setNum - 1] = {
+                        team1: newLeftScore,
+                        team2: rightScore,
+                    };
+                    return newScores;
+                });
+                setLeftSets((prev) => prev + 1);
+                setSetNum((prev) => prev + 1);
+                setLeftScore(0);
+                setRightScore(0);
+                setLeftTOCount(0);
+                setRightTOCount(0);
+            } else {
+                setLeftScore(newLeftScore);
+            }
         }
     };
 
@@ -93,24 +99,26 @@ function MatchEditPage() {
     };
 
     const handleRightScoreIncrement = () => {
-        const newRightScore = rightScore + 1;
-        if (newRightScore >= 25 && newRightScore - leftScore >= 2) {
-            setSetScores((prev) => {
-                const newScores = [...prev];
-                newScores[setNum - 1] = {
-                    team1: leftScore,
-                    team2: newRightScore,
-                };
-                return newScores;
-            });
-            setRightSets((prev) => prev + 1);
-            setSetNum((prev) => prev + 1);
-            setLeftScore(0);
-            setRightScore(0);
-            setLeftTOCount(0)
-            setRightTOCount(0)
-        } else {
-            setRightScore(newRightScore);
+        if (!isTooMuchSets()) {
+            const newRightScore = rightScore + 1;
+            if (newRightScore >= 25 && newRightScore - leftScore >= 2) {
+                setSetScores((prev) => {
+                    const newScores = [...prev];
+                    newScores[setNum - 1] = {
+                        team1: leftScore,
+                        team2: newRightScore,
+                    };
+                    return newScores;
+                });
+                setRightSets((prev) => prev + 1);
+                setSetNum((prev) => prev + 1);
+                setLeftScore(0);
+                setRightScore(0);
+                setLeftTOCount(0);
+                setRightTOCount(0);
+            } else {
+                setRightScore(newRightScore);
+            }
         }
     };
 
@@ -129,7 +137,12 @@ function MatchEditPage() {
             <main className="bg-primary min-h-screen flex-1">
                 <SwitchSidesButton />
                 <div className="flex items-center gap-5 justify-center">
-                    <TeamLeft name={team1} score={leftScore} sets={leftSets} TOcount={leftTOCount}/>
+                    <TeamLeft
+                        name={team1}
+                        score={leftScore}
+                        sets={leftSets}
+                        TOcount={leftTOCount}
+                    />
                     <p className="text-5xl text-primary-foreground">:</p>
                     <TeamRight
                         name={team2}
