@@ -9,7 +9,7 @@ import {
     AlertDialogTitle,
     AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import type { Player } from "@/types/player";
 import PlayerSelect from "./PlayerSelect";
 
@@ -18,13 +18,16 @@ interface Props {
     players: Player[];
     buttonText: string;
     buttonClass?: string;
+    disabled: boolean
 }
 
-function CardDialog({ card, players, buttonText, buttonClass }: Props) {
+function CardDialog({ card, players, buttonText, buttonClass, disabled }: Props) {
     return (
         <AlertDialog>
             <AlertDialogTrigger asChild>
-                <Button className={buttonClass}>{buttonText}</Button>
+                <button disabled={disabled} className={buttonVariants({ className: buttonClass })}>
+                    {buttonText}
+                </button>
             </AlertDialogTrigger>
             <AlertDialogContent>
                 <AlertDialogHeader>
@@ -38,9 +41,9 @@ function CardDialog({ card, players, buttonText, buttonClass }: Props) {
                 <AlertDialogFooter>
                     <AlertDialogCancel>Zrušit</AlertDialogCancel>
                     <AlertDialogAction>
-                        <Button className=" font-bold bg-primary-foreground text-primary w-[110px] hover:bg-secondary hover:text-primary-foreground">
+                        <button className="font-bold bg-primary-foreground text-primary w-[110px] hover:bg-secondary hover:text-primary-foreground inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm h-9 px-4 py-2">
                             Udělit Kartu
-                        </Button>
+                        </button>
                     </AlertDialogAction>
                 </AlertDialogFooter>
             </AlertDialogContent>
