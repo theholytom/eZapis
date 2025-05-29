@@ -1,8 +1,12 @@
+import type { Player } from "@/types/player";
+import CardDialog from "./CardDialog";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils"; // Assuming cn utility is available
+import SubstituteDialog from "./SubtituteDialog";
 
 interface Props {
     className?: string;
+    players: Player[];
     onScoreIncrement?: () => void;
     onScoreDecrement?: () => void;
     onTOincrement?: () => void;
@@ -10,23 +14,27 @@ interface Props {
 
 function EditButtons({
     className = "",
+    players,
     onScoreIncrement,
     onScoreDecrement,
-    onTOincrement
+    onTOincrement,
 }: Props) {
     return (
         <section
-            className={cn(
-                "bg-primary flex flex-col gap-10 pt-20 [&>button]:bg-primary-foreground [&>button]:text-primary [&>button]:text-2xl [&>button]:font-bold [&>button]:hover:bg-secondary [&>button]:hover:text-primary-foreground [&>button]:w-[150px] [&>button]:min-h-[100px] [&>button]:whitespace-normal",
-                className
-            )}
+            className={cn("bg-primary flex flex-col gap-10 pt-20", className)}
         >
-            <Button onClick={onScoreIncrement}>+ bod</Button>
-            <Button onClick={onScoreDecrement}>- bod</Button>
-            <Button onClick={onTOincrement}>Time-out</Button>
-            <Button>Střídání</Button>
-            <Button>Žlutá karta</Button>
-            <Button>Červená karta</Button>
+            <Button className="edit-button" onClick={onScoreIncrement}>
+                + bod
+            </Button>
+            <Button className="edit-button" onClick={onScoreDecrement}>
+                - bod
+            </Button>
+            <Button className="edit-button" onClick={onTOincrement}>
+                Time-out
+            </Button>
+            <SubstituteDialog players={players} buttonText="Střídání" buttonClass="edit-button"></SubstituteDialog>
+            <CardDialog card="žlutá" players={players} buttonText="Žlutá karta" buttonClass="edit-button" />
+            <CardDialog card="červená" players={players} buttonText="Červená karta" buttonClass="edit-button" />
         </section>
     );
 }
