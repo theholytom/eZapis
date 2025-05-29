@@ -1,9 +1,11 @@
+import MatchTable from "@/components/MatchTable";
 import Layout from "../components/Layout";
+
 
 function MatchesPage() {
     return (
         <Layout>
-            <h1>Matches</h1>
+            <MatchTable />
         </Layout>
     );
 }

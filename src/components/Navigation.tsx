@@ -3,7 +3,7 @@ import cvLogo from "../assets/cesky-volejbal.png";
 
 function Navigation() {
     return (
-        <nav className="fixed top-0 left-0 right-0 bg-primary p-4">
+        <nav className="fixed top-0 left-0 right-0 bg-primary p-4 z-50">
             <ul className="flex items-center gap-8 tracking-wide [&>li_*]:(font-medium text-2xl text-white/90 transition-all duration-300)">
                 <li>
                     <a href="https://www.cvf.cz" className="flex items-center">
