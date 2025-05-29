@@ -31,7 +31,7 @@ function TeamRight({ name, score = 0, sets = 0, TOcount = 0 }: TeamRightProps) {
                     <p>T</p>
                 </div>
             </div>
-            <p className="text-5xl text-primary-foreground truncate">{name}</p>
+            <p className="text-4xl text-primary-foreground truncate">{name}</p>
         </div>
     );
 }

@@ -19,7 +19,7 @@ function TeamLeft({ name, score = 0, sets = 0, TOcount = 0 }: TeamLeftProps) {
     }
     return (
         <div className="flex items-center gap-6 max-w-[600px] min-w-[400px] w-full justify-end">
-            <p className="text-5xl text-primary-foreground truncate">{name}</p>
+            <p className="text-4xl text-primary-foreground truncate">{name}</p>
             <div>
                 <Button className="bg-primary-foreground pointer-events-none h-12 w-12 text-3xl text-primary">
                     {sets}
