@@ -5,6 +5,7 @@ import TeamRight from "@/components/TeamRight";
 import Rosters from "@/components/Rosters";
 import EditButtons from "@/components/EditButtons";
 import { useState } from "react";
+import FinalButtons from "@/components/FinalButtons";
 
 interface SetScore {
     team1: number;
@@ -146,6 +147,7 @@ function MatchEditPage() {
                     setScores={setScores}
                 />
                 <Rosters playersA={playersA} playersB={playersB} />
+                <FinalButtons />
             </main>
             <EditButtons
                 className="pr-10"

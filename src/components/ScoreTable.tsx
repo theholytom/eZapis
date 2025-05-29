@@ -1,5 +1,3 @@
-import { useState, useEffect } from "react";
-
 interface SetScores {
     team1: number;
     team2: number;
