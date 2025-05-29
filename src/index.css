@@ -29,6 +29,7 @@
     --chart-4: #af57db;
     --chart-5: #eb8888;
     --sidebar: #18181b;
+    --to: #e32d2d;
     --sidebar-foreground: #f4f4f5;
     --sidebar-primary: #1d4ed8;
     --sidebar-primary-foreground: #ffffff;
@@ -75,6 +76,7 @@
     --color-chart-3: var(--chart-3);
     --color-chart-4: var(--chart-4);
     --color-chart-5: var(--chart-5);
+    --color-to: var(--to);
     --color-sidebar: var(--sidebar);
     --color-sidebar-foreground: var(--sidebar-foreground);
     --color-sidebar-primary: var(--sidebar-primary);

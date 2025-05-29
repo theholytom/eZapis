@@ -5,7 +5,7 @@ interface Props {
 
 function Rosters({ playersA, playersB }: Props) {
     return (
-        <div className="flex gap-10 justify-center pt-3 pb-30">
+        <div className="flex gap-10 justify-center pt-3 pb-10">
             {[playersA, playersB].map((players, tableIndex) => (
                 <div key={tableIndex} className="flex-none">
                     <table className="w-[350px] table-fixed bg-primary-foreground text-background border-collapse overflow-hidden rounded-md [&_td]:px-4 [&_td]:py-2 [&_td]:border [&_td]:border-primary [&_tr]:hover:bg-gray-300">
