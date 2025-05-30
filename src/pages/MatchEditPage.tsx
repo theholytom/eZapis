@@ -12,7 +12,7 @@ import { matches } from "@/data/matches.json";
 import { teams } from "@/data/teams";
 import { usePersistentState } from "@/components/hooks/UsePersistentState";
 
-interface SetScore {
+export interface SetScore {
     team1: number;
     team2: number;
 }
