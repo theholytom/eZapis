@@ -5,9 +5,11 @@ import YellowCard from "./icons/YellowCard";
 export interface RostersProps {
     playersA: Player[];
     playersB: Player[];
+    yellowCards: string[]
+    redCards: string[]
 }
 
-export default function Rosters({ playersA, playersB }: RostersProps) {
+export default function Rosters({ playersA, playersB, yellowCards, redCards }: RostersProps) {
     return (
         <div className="flex gap-10 justify-center pt-3 pb-10">
             {[playersA, playersB].map((players, tableIndex) => (
@@ -20,23 +22,37 @@ export default function Rosters({ playersA, playersB }: RostersProps) {
                             </tr>
                         </thead>
                         <tbody>
-                            {players.map((player, index) => (
-                                <tr key={index}>
-                                    <td className="w-[80px] text-center">
-                                        {player.number}
-                                    </td>
-                                    <td className="w-[300px] truncate">
-                                        <div className="flex justify-between">
-                                            {player.name}
-                                            <div className="flex">
-                                                {/* EDIT HERE TO SHOW RED AND YELLOW CARDS */}
-                                                <YellowCard classname="hidden" />
-                                                <RedCard classname="hidden" />
+                            {players.map((player, index) => {
+                                const yellowCardCount = yellowCards.filter(id => id === player.id).length;
+                                const redCardCount = redCards.filter(id => id === player.id).length;
+                                
+                                return (
+                                    <tr key={index}>
+                                        <td className="w-[80px] text-center">
+                                            {player.number}
+                                        </td>
+                                        <td className="w-[300px] truncate">
+                                            <div className="flex justify-between">
+                                                {player.name}
+                                                <div className="flex gap-0,5 items-center">
+                                                    {yellowCardCount > 0 && (
+                                                        <>
+                                                            <p>{yellowCardCount}</p>
+                                                            <YellowCard />
+                                                        </>
+                                                    )}
+                                                    {redCardCount > 0 && (
+                                                        <>
+                                                            <p>{redCardCount}</p>
+                                                            <RedCard />
+                                                        </>
+                                                    )}
+                                                </div>
                                             </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                            ))}
+                                        </td>
+                                    </tr>
+                                );
+                            })}
                         </tbody>
                     </table>
                 </div>
