@@ -1,6 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+    createBrowserRouter,
+    RouterProvider,
+    useParams,
+} from "react-router-dom";
 import "./index.css";
 import Homepage from "./pages/HomePage";
 import NotFoundPage from "./pages/NotFoundPage";
@@ -10,6 +14,17 @@ import MatchEditPage from "./pages/MatchEditPage";
 import FavoritePage from "./pages/FavoritePage";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
+
+// Wrapper components
+function MatchEditWrapper() {
+    const { matchId } = useParams();
+    return <MatchEditPage matchId={matchId!} />;
+}
+
+function MatchViewWrapper() {
+    const { matchId } = useParams();
+    return <MatchViewPage matchId={matchId!} />;
+}
 
 const router = createBrowserRouter([
     {
@@ -23,11 +38,11 @@ const router = createBrowserRouter([
     },
     {
         path: "/matches/:matchId/",
-        element: <MatchViewPage />,
+        element: <MatchViewWrapper />,
     },
     {
         path: "/matches/:matchId/edit",
-        element: <MatchEditPage />,
+        element: <MatchEditWrapper />,
     },
     {
         path: "/favorite",
