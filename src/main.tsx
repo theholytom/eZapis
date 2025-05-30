@@ -1,9 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import {
-    createBrowserRouter,
+    // createBrowserRouter,
     RouterProvider,
     useParams,
+    createHashRouter
 } from "react-router-dom";
 import "./index.css";
 import Homepage from "./pages/HomePage";
@@ -26,7 +27,7 @@ function MatchViewWrapper() {
     return <MatchViewPage matchId={matchId!} />;
 }
 
-const router = createBrowserRouter([
+const router = createHashRouter([
     {
         path: "/",
         element: <Homepage />,
