@@ -9,17 +9,18 @@ import type { Player } from "@/types/player";
 
 interface Props {
     players: Player[];
+    onSelect: (playerId: string) => void;
 }
 
-function PlayerSelect({ players }: Props) {
+function PlayerSelect({ players, onSelect }: Props) {
     return (
-        <Select>
+        <Select onValueChange={onSelect}>
             <SelectTrigger className="w-[180px] bg-primary-foreground text-black">
-                <SelectValue placeholder="Vyber hráče"/>
+                <SelectValue placeholder="Vyber hráče" />
             </SelectTrigger>
-            <SelectContent >
+            <SelectContent>
                 {players.map((player) => (
-                    <SelectItem key={player.id} value={player.id} >
+                    <SelectItem key={player.id} value={player.id}>
                         {player.number} {player.name}
                     </SelectItem>
                 ))}
