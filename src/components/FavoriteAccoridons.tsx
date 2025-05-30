@@ -37,9 +37,9 @@ function FavoriteAccordions() {
                     </AccordionTrigger>
                     <AccordionContent>
                         <ul className="text-black px-4 flex flex-col gap-3 pt-3">
-                            <li>ahoj</li>
-                            <li>ahoj</li>
-                            <li>ahoj</li>
+                            <li>VK Lvi Praha</li>
+                            <li>VK ČEZ Karlovarsko</li>
+                            <li>VK Ostrava</li>
                         </ul>
                     </AccordionContent>
                 </AccordionItem>
