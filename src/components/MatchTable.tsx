@@ -123,7 +123,7 @@ function MatchTable() {
                                             to={`/matches/${match.id}`}
                                             className="block w-full transition-colors font-medium"
                                         >
-                                            {getTeamName(match.secondTeamID)}
+                                            {getTeamName(match.secondTeamId)}
                                         </Link>
                                     </TableCell>
                                     <TableCell>
