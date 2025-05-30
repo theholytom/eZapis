@@ -9,13 +9,13 @@ import {
     AlertDialogTitle,
     AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { Link } from "react-router-dom";
 
 interface Props {
     disabled: boolean;
+    onMatchEnd: () => void;
 }
 
-function EndMatchDialog({ disabled }: Props) {
+function EndMatchDialog({ disabled, onMatchEnd }: Props) {
     return (
         <AlertDialog>
             <AlertDialogTrigger asChild>
@@ -37,12 +37,13 @@ function EndMatchDialog({ disabled }: Props) {
                 </AlertDialogHeader>
                 <AlertDialogFooter>
                     <AlertDialogCancel>Ne</AlertDialogCancel>
-                    <Link
-                        to="/matches"
-                        className="text-destructive-foreground bg-destructive hover:bg-destructive/90 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm h-9 px-4 py-2"
+                    <AlertDialogAction onClick={onMatchEnd}>
+                    <button
+                        className="text-destructive-foreground bg-destructive hover:bg-to/80 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm h-9 px-4 py-2"
                     >
                         Ano
-                    </Link>
+                    </button>
+                    </AlertDialogAction>
                 </AlertDialogFooter>
             </AlertDialogContent>
         </AlertDialog>
