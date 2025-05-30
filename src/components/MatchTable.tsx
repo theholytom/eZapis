@@ -80,8 +80,8 @@ function MatchTable() {
                                     className={cn(
                                         "transition-colors duration-200",
                                         matchIsToday &&
-                                            "bg-primary/10 hover:bg-primary/20",
-                                        matchIsUpcoming && "bg-muted/50",
+                                            "bg-primary/10 hover:bg-primary/40",
+                                        matchIsUpcoming && "bg-chart-1/20",
                                         !matchIsToday &&
                                             !matchIsUpcoming &&
                                             "hover:bg-ring"
@@ -104,9 +104,7 @@ function MatchTable() {
                                                 className={cn(
                                                     "px-2 py-1 rounded-md text-sm",
                                                     matchIsToday &&
-                                                        "bg-primary text-primary-foreground",
-                                                    matchIsUpcoming &&
-                                                        "bg-muted"
+                                                        "bg-primary text-primary-foreground"
                                                 )}
                                             >
                                                 {formatDate(match.date)}
@@ -156,7 +154,7 @@ function MatchTable() {
                                                     )}
                                                 </div>
                                             ) : (
-                                                <span className="text-muted-foreground">
+                                                <span className="text-background/80">
                                                     Naplánováno
                                                 </span>
                                             )}
