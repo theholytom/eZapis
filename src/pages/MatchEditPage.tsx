@@ -247,6 +247,10 @@ function MatchEditPage({ matchId }: Props) {
         setRightScore((prev) => Math.max(0, prev - 1));
     };
 
+    const handleSubstitute = (playerOutId: string, playerInId: string) => {
+        console.log("Player Out: " + playerOutId + ", Player In: " + playerInId)
+    }
+
     if (!match) {
         return <div>Loading...</div>;
     }
@@ -262,6 +266,7 @@ function MatchEditPage({ matchId }: Props) {
                 onTOincrement={handleLeftTO}
                 onYellowCard={handleYellowCard}
                 onRedCard={handleRedCard}
+                onSubstitute={handleSubstitute}
             />
             <main className="bg-primary min-h-screen flex-1">
                 <SwitchSidesButton />
@@ -305,6 +310,7 @@ function MatchEditPage({ matchId }: Props) {
                 onTOincrement={handleRightTO}
                 onRedCard={handleRedCard}
                 onYellowCard={handleYellowCard}
+                onSubstitute={handleSubstitute}
             />
         </div>
     );

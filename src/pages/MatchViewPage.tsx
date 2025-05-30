@@ -18,7 +18,6 @@ interface Props {
 function MatchViewPage({ matchId }: Props) {
 
     const [match, setMatch] = usePersistentState<Match | null>("match", null);
-    const [isFinal, setIsFinal] = usePersistentState<boolean>("final", false);
     const [leftScore, setLeftScore] = usePersistentState<number>(
         "leftScore",
         0
@@ -94,7 +93,6 @@ function MatchViewPage({ matchId }: Props) {
                 setLeftSets(leftSetsWon);
                 setRightSets(rightSetsWon);
                 setSetNum(foundMatch.sets.length + 1);
-                setIsFinal(foundMatch.final);
 
                 // Convert historical sets to setScores format
                 const initialSetScores = Array(5)

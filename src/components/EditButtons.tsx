@@ -12,6 +12,7 @@ interface Props {
     onTOincrement?: () => void;
     onYellowCard: (playerId: string) => void;
     onRedCard: (playerId: string) => void;
+    onSubstitute: (playerOutId: string, playerInId: string) => void
     disabled: boolean;
 }
 
@@ -23,6 +24,7 @@ function EditButtons({
     onTOincrement,
     onYellowCard,
     onRedCard,
+    onSubstitute,
     disabled,
 }: Props) {
     return (
@@ -55,6 +57,7 @@ function EditButtons({
                 players={players}
                 buttonText="Střídání"
                 buttonClass="edit-button"
+                onSubstitute={onSubstitute}
             />
             <CardDialog
                 disabled={disabled}
