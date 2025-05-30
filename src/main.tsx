@@ -4,7 +4,7 @@ import {
     // createBrowserRouter,
     RouterProvider,
     useParams,
-    createHashRouter
+    createHashRouter,
 } from "react-router-dom";
 import "./index.css";
 import Homepage from "./pages/HomePage";
