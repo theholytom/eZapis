@@ -1,4 +1,4 @@
-import { matches } from "@/data/matches";
+import { matches } from "@/data/matches.json";
 import { teams } from "@/data/teams";
 import { Link } from "react-router-dom";
 import {
@@ -19,8 +19,9 @@ function MatchTable() {
     };
 
     // Format date to local string
-    const formatDate = (date: Date) => {
-        return new Date(date).toLocaleString("cs-CZ", {
+    const formatDate = (dateStr: string) => {
+        const date = new Date(dateStr);
+        return date.toLocaleString("cs-CZ", {
             year: "numeric",
             month: "2-digit",
             day: "2-digit",
@@ -30,13 +31,15 @@ function MatchTable() {
     };
 
     // Check if match is today
-    const isToday = (date: Date) => {
+    const isToday = (dateStr: string) => {
+        const date = new Date(dateStr);
         const today = new Date();
         return date.toDateString() === today.toDateString();
     };
 
     // Check if match is upcoming (in next 7 days)
-    const isUpcoming = (date: Date) => {
+    const isUpcoming = (dateStr: string) => {
+        const date = new Date(dateStr);
         const today = new Date();
         const sevenDays = new Date();
         sevenDays.setDate(sevenDays.getDate() + 7);
