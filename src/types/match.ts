@@ -3,7 +3,7 @@ import type { Set } from "./set";
 export interface Match {
     id: string;
     firstTeamId: string;
-    secondTeamID: string;
+    secondTeamId: string;
     date: Date;
     yellowCard?: string[]
     redCard?: string[]
