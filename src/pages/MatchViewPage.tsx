@@ -16,7 +16,7 @@ interface Props {
 }
 
 function MatchViewPage({ matchId }: Props) {
-
+    const [, setIsFinal] = usePersistentState<boolean>("final", false);
     const [match, setMatch] = usePersistentState<Match | null>("match", null);
     const [leftScore, setLeftScore] = usePersistentState<number>(
         "leftScore",
@@ -111,7 +111,7 @@ function MatchViewPage({ matchId }: Props) {
                 setRightTOCount(0);
                 setYellowCard(foundMatch.yellowCard);
                 setRedCard(foundMatch.redCard);
-
+                setIsFinal(foundMatch.final);
                 // Load team rosters when match is available
                 const team1 = teams.find(
                     (t) => t.id === foundMatch.firstTeamId
