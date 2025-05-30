@@ -1,0 +1,290 @@
+{
+    "matches": [
+        {
+            "id": "1",
+            "firstTeamId": "1",
+            "secondTeamId": "2",
+            "date": "2024-01-15T18:30:00",
+            "yellowCard": ["1", "15"],
+            "redCard": ["16"],
+            "sets": [
+                { "number": 1, "scoreTeamA": 25, "scoreTeamB": 22 },
+                { "number": 2, "scoreTeamA": 23, "scoreTeamB": 25 },
+                { "number": 3, "scoreTeamA": 25, "scoreTeamB": 20 },
+                { "number": 4, "scoreTeamA": 26, "scoreTeamB": 28 },
+                { "number": 5, "scoreTeamA": 26, "scoreTeamB": 28 }
+            ],
+            "final": true
+        },
+        {
+            "id": "2",
+            "firstTeamId": "3",
+            "secondTeamId": "4",
+            "date": "2024-01-20T17:00:00",
+            "yellowCard": ["24", "36"],
+            "redCard": [],
+            "sets": [
+                { "number": 1, "scoreTeamA": 25, "scoreTeamB": 21 },
+                { "number": 2, "scoreTeamA": 25, "scoreTeamB": 23 },
+                { "number": 3, "scoreTeamA": 25, "scoreTeamB": 19 }
+            ],
+            "final": true
+        },
+        {
+            "id": "3",
+            "firstTeamId": "5",
+            "secondTeamId": "6",
+            "date": "2024-01-01T19:00:00",
+            "yellowCard": ["47", "58"],
+            "redCard": [],
+            "sets": [
+                { "number": 1, "scoreTeamA": 25, "scoreTeamB": 18 },
+                { "number": 2, "scoreTeamA": 25, "scoreTeamB": 20 },
+                { "number": 3, "scoreTeamA": 23, "scoreTeamB": 25 },
+                { "number": 4, "scoreTeamA": 25, "scoreTeamB": 22 }
+            ],
+            "final": true
+        },
+        {
+            "id": "4",
+            "firstTeamId": "7",
+            "secondTeamId": "8",
+            "date": "2024-01-10T18:30:00",
+            "yellowCard": ["72", "83"],
+            "redCard": [],
+            "sets": [
+                { "number": 1, "scoreTeamA": 21, "scoreTeamB": 25 },
+                { "number": 2, "scoreTeamA": 15, "scoreTeamB": 25 },
+                { "number": 3, "scoreTeamA": 24, "scoreTeamB": 26 }
+            ],
+            "final": true
+        },
+        {
+            "id": "5",
+            "firstTeamId": "9",
+            "secondTeamId": "10",
+            "date": "2024-01-15T17:00:00",
+            "yellowCard": ["94", "106"],
+            "redCard": ["94"],
+            "sets": [
+                { "number": 1, "scoreTeamA": 23, "scoreTeamB": 25 },
+                { "number": 2, "scoreTeamA": 25, "scoreTeamB": 22 },
+                { "number": 3, "scoreTeamA": 25, "scoreTeamB": 20 },
+                { "number": 4, "scoreTeamA": 25, "scoreTeamB": 23 }
+            ],
+            "final": true
+        },
+        {
+            "id": "6",
+            "firstTeamId": "2",
+            "secondTeamId": "3",
+            "date": "2024-01-25T19:00:00",
+            "yellowCard": ["13", "25"],
+            "redCard": [],
+            "sets": [
+                { "number": 1, "scoreTeamA": 25, "scoreTeamB": 22 },
+                { "number": 2, "scoreTeamA": 25, "scoreTeamB": 20 },
+                { "number": 3, "scoreTeamA": 25, "scoreTeamB": 18 }
+            ],
+            "final": true
+        },
+        {
+            "id": "7",
+            "firstTeamId": "4",
+            "secondTeamId": "5",
+            "date": "2024-02-01T18:30:00",
+            "yellowCard": ["35", "48"],
+            "redCard": [],
+            "sets": [
+                { "number": 1, "scoreTeamA": 25, "scoreTeamB": 23 },
+                { "number": 2, "scoreTeamA": 22, "scoreTeamB": 25 },
+                { "number": 3, "scoreTeamA": 25, "scoreTeamB": 21 },
+                { "number": 4, "scoreTeamA": 25, "scoreTeamB": 19 }
+            ],
+            "final": true
+        },
+        {
+            "id": "8",
+            "firstTeamId": "6",
+            "secondTeamId": "7",
+            "date": "2024-02-05T17:00:00",
+            "yellowCard": ["60", "70"],
+            "redCard": [],
+            "sets": [
+                { "number": 1, "scoreTeamA": 25, "scoreTeamB": 20 },
+                { "number": 2, "scoreTeamA": 25, "scoreTeamB": 18 },
+                { "number": 3, "scoreTeamA": 25, "scoreTeamB": 22 }
+            ],
+            "final": true
+        },
+        {
+            "id": "9",
+            "firstTeamId": "8",
+            "secondTeamId": "9",
+            "date": "2024-02-10T19:00:00",
+            "yellowCard": ["84", "95"],
+            "redCard": [],
+            "sets": [
+                { "number": 1, "scoreTeamA": 25, "scoreTeamB": 23 },
+                { "number": 2, "scoreTeamA": 23, "scoreTeamB": 25 },
+                { "number": 3, "scoreTeamA": 25, "scoreTeamB": 21 },
+                { "number": 4, "scoreTeamA": 25, "scoreTeamB": 20 }
+            ],
+            "final": true
+        },
+        {
+            "id": "10",
+            "firstTeamId": "10",
+            "secondTeamId": "1",
+            "date": "2024-02-15T18:30:00",
+            "yellowCard": ["104", "3"],
+            "redCard": [],
+            "sets": [
+                { "number": 1, "scoreTeamA": 25, "scoreTeamB": 22 },
+                { "number": 2, "scoreTeamA": 25, "scoreTeamB": 19 },
+                { "number": 3, "scoreTeamA": 25, "scoreTeamB": 21 }
+            ],
+            "final": true
+        },
+        {
+            "id": "11",
+            "firstTeamId": "1",
+            "secondTeamId": "3",
+            "date": "2024-02-20T18:30:00",
+            "yellowCard": [],
+            "redCard": [],
+            "sets": [],
+            "final": false
+        },
+        {
+            "id": "12",
+            "firstTeamId": "2",
+            "secondTeamId": "4",
+            "date": "2024-02-25T19:00:00",
+            "yellowCard": [],
+            "redCard": [],
+            "sets": [],
+            "final": false
+        },
+        {
+            "id": "13",
+            "firstTeamId": "5",
+            "secondTeamId": "7",
+            "date": "2024-03-01T18:30:00",
+            "yellowCard": [],
+            "redCard": [],
+            "sets": [],
+            "final": false
+        },
+        {
+            "id": "14",
+            "firstTeamId": "6",
+            "secondTeamId": "8",
+            "date": "2024-03-05T17:00:00",
+            "yellowCard": [],
+            "redCard": [],
+            "sets": [],
+            "final": false
+        },
+        {
+            "id": "15",
+            "firstTeamId": "8",
+            "secondTeamId": "9",
+            "date": "2024-03-10T19:00:00",
+            "yellowCard": [],
+            "redCard": [],
+            "sets": [],
+            "final": false
+        },
+        {
+            "id": "16",
+            "firstTeamId": "10",
+            "secondTeamId": "1",
+            "date": "2024-03-15T18:30:00",
+            "yellowCard": [],
+            "redCard": [],
+            "sets": [],
+            "final": false
+        },
+        {
+            "id": "17",
+            "firstTeamId": "1",
+            "secondTeamId": "3",
+            "date": "2024-03-20T18:30:00",
+            "yellowCard": [],
+            "redCard": [],
+            "sets": [],
+            "final": false
+        },
+        {
+            "id": "18",
+            "firstTeamId": "2",
+            "secondTeamId": "4",
+            "date": "2024-03-25T19:00:00",
+            "yellowCard": [],
+            "redCard": [],
+            "sets": [],
+            "final": false
+        },
+        {
+            "id": "19",
+            "firstTeamId": "5",
+            "secondTeamId": "7",
+            "date": "2024-04-01T18:30:00",
+            "yellowCard": [],
+            "redCard": [],
+            "sets": [],
+            "final": false
+        },
+        {
+            "id": "20",
+            "firstTeamId": "6",
+            "secondTeamId": "8",
+            "date": "2024-04-05T17:00:00",
+            "yellowCard": [],
+            "redCard": [],
+            "sets": [],
+            "final": false
+        },
+        {
+            "id": "21",
+            "firstTeamId": "8",
+            "secondTeamId": "9",
+            "date": "2024-04-10T19:00:00",
+            "yellowCard": [],
+            "redCard": [],
+            "sets": [],
+            "final": false
+        },
+        {
+            "id": "22",
+            "firstTeamId": "10",
+            "secondTeamId": "1",
+            "date": "2024-04-15T18:30:00",
+            "yellowCard": [],
+            "redCard": [],
+            "sets": [],
+            "final": false
+        },
+        {
+            "id": "23",
+            "firstTeamId": "1",
+            "secondTeamId": "3",
+            "date": "2024-04-20T18:30:00",
+            "yellowCard": [],
+            "redCard": [],
+            "sets": [],
+            "final": false
+        },
+        {
+            "id": "24",
+            "firstTeamId": "2",
+            "secondTeamId": "4",
+            "date": "2024-04-25T19:00:00",
+            "yellowCard": [],
+            "redCard": [],
+            "sets": [],
+            "final": false
+        }
+    ]
+} 
