@@ -110,14 +110,6 @@ function Navigation() {
                         to="/matches/"
                         className="relative block w-full lg:w-auto py-2 lg:py-1 px-2 after:absolute after:bg-white after:h-[2px] after:w-0 after:-bottom-1 after:left-0 hover:after:w-full after:transition-all after:duration-300 hover:text-white rounded-lg"
                     >
-                        Zapsat zápas
-                    </Link>
-                </li>
-                <li className="w-full lg:w-auto">
-                    <Link
-                        to="/matches/"
-                        className="relative block w-full lg:w-auto py-2 lg:py-1 px-2 after:absolute after:bg-white after:h-[2px] after:w-0 after:-bottom-1 after:left-0 hover:after:w-full after:transition-all after:duration-300 hover:text-white rounded-lg"
-                    >
                         Zápasy
                     </Link>
                 </li>
