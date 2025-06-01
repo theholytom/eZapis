@@ -1,22 +1,15 @@
-import {
-    Card,
-    CardContent,
-    CardHeader,
-    CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
-interface StaticticCardProps {
+interface StatisticCardProps {
     title: string;
-    value: number
+    value: number;
 }
 
-export default function StaticticCard({ title, value }: StaticticCardProps) {
+export default function StatisticCard({ title, value }: StatisticCardProps) {
     return (
-        <Card className="bg-chart-1 text-primary-foreground flex-column min-w-[300px]">
+        <Card className="bg-chart-1 text-primary-foreground flex-column w-[300px]">
             <CardHeader>
-                <CardTitle className="whitespace-nowrap">
-                    {title}
-                </CardTitle>
+                <CardTitle>{title}</CardTitle>
             </CardHeader>
             <CardContent>{value}</CardContent>
         </Card>

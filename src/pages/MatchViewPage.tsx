@@ -66,38 +66,52 @@ function MatchViewPage({ matchId }: Props) {
     const team2Name = team2?.name || "Unknown Team";
 
     return (
-        <main className="bg-primary min-h-screen flex-1">
-            <ViewButtons />
-            <div className="flex items-center gap-5 justify-center">
-                <TeamLeft
-                    name={team1Name}
-                    score={leftScore}
-                    sets={leftSetsWon}
-                    TOcount={0}
-                />
-                <p className="text-5xl text-primary-foreground">:</p>
-                <TeamRight
-                    name={team2Name}
-                    score={rightScore}
-                    sets={rightSetsWon}
-                    TOcount={0}
-                />
+        <div className="fixed inset-0 bg-primary overflow-auto">
+            <div className="p-4">
+                <ViewButtons />
+                <div className="overflow-auto -mx-4 px-4">
+                    <div className="min-w-[800px] flex items-center gap-5 justify-center my-4">
+                        <TeamLeft
+                            name={team1Name}
+                            score={leftScore}
+                            sets={leftSetsWon}
+                            TOcount={0}
+                        />
+                        <p className="text-5xl text-primary-foreground">:</p>
+                        <TeamRight
+                            name={team2Name}
+                            score={rightScore}
+                            sets={rightSetsWon}
+                            TOcount={0}
+                        />
+                    </div>
+                </div>
+                <div className="space-y-4">
+                    <div className="overflow-auto -mx-4 px-4">
+                        <div className="min-w-[800px]">
+                            <ScoreTable
+                                team1={team1Name}
+                                team2={team2Name}
+                                set={sets.length + 1}
+                                team1Points={leftScore}
+                                team2points={rightScore}
+                                setScores={setScores}
+                            />
+                        </div>
+                    </div>
+                    <div className="overflow-auto -mx-4 px-4">
+                        <div className="min-w-[800px] px-12">
+                            <Rosters
+                                playersA={team1?.roster || []}
+                                playersB={team2?.roster || []}
+                                yellowCards={match.yellowCard || []}
+                                redCards={match.redCard || []}
+                            />
+                        </div>
+                    </div>
+                </div>
             </div>
-            <ScoreTable
-                team1={team1Name}
-                team2={team2Name}
-                set={sets.length + 1}
-                team1Points={leftScore}
-                team2points={rightScore}
-                setScores={setScores}
-            />
-            <Rosters
-                playersA={team1?.roster || []}
-                playersB={team2?.roster || []}
-                yellowCards={match.yellowCard || []}
-                redCards={match.redCard || []}
-            />
-        </main>
+        </div>
     );
 }
 

@@ -8,10 +8,10 @@ import fivbLogo from "../assets/FIVB.png";
 
 function Footer() {
     return (
-        <footer className="bg-primary p-4 mt-auto">
-            <div className="container mx-auto">
-                <div className="flex justify-between px-8 mb-4">
-                    <ul className="flex gap-6 [&>li]:text-white items-center [&_svg]:hover:scale-125 [&_svg]:transition-transform [&_img]:hover:scale-110 [&_img]:transition-transform">
+        <footer className="bg-primary w-full">
+            <div className="container mx-auto px-4">
+                <div className="flex flex-col md:flex-row justify-between py-4 gap-4">
+                    <ul className="flex flex-wrap gap-6 [&>li]:text-white items-center [&_svg]:hover:scale-125 [&_svg]:transition-transform [&_img]:hover:scale-110 [&_img]:transition-transform">
                         <li>
                             <a href="https://www.instagram.com/czech_volleyball/?hl=cs">
                                 <InstagramIcon size={24} />
@@ -56,7 +56,7 @@ function Footer() {
                             </a>
                         </li>
                     </ul>
-                    <ul className="flex flex-col justify-center space-y-3 text-sm font-medium mr-12 [&>li>a]:text-white/90 [&>li>a]:hover:text-white [&>li>a]:transition-colors [&>li>a]:duration-200 [&>li>a]:flex [&>li>a]:items-center [&>li>a]:gap-2 [&>li>a]:tracking-wide">
+                    <ul className="flex flex-col justify-center space-y-3 text-sm font-medium [&>li>a]:text-white/90 [&>li>a]:hover:text-white [&>li>a]:transition-colors [&>li>a]:duration-200 [&>li>a]:flex [&>li>a]:items-center [&>li>a]:gap-2 [&>li>a]:tracking-wide">
                         <li>
                             <a href="https://gitlab.fel.cvut.cz/holytom5/ezapis-react-project">
                                 Dokumentace
@@ -72,7 +72,7 @@ function Footer() {
                         </li>
                     </ul>
                 </div>
-                <div className="border-t border-white/20 pt-4">
+                <div className="border-t border-white/20 py-4">
                     <p className="text-white/70 text-sm text-center">
                         © 2025 Všechna práva vyhrazena
                     </p>

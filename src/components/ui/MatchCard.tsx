@@ -14,14 +14,16 @@ export default function MatchCard({ matchId }: MatchCardProps) {
     const time = match ? new Date(match.date) : new Date();
 
     return (
-        <Card className="bg-chart-1 text-primary-foreground flex-column w-[500px]">
+        <Card className="bg-chart-1 text-primary-foreground flex-column w-[300px]">
             <Link to={`/matches/${matchId}`}>
                 <CardHeader>
-                    <CardTitle className="whitespace-nowrap">
+                    <CardTitle className="break-words">
                         {team1} vs {team2}
                     </CardTitle>
                 </CardHeader>
-                <CardContent>{time.toLocaleString()}</CardContent>
+                <CardContent className="text-sm">
+                    {time.toLocaleString()}
+                </CardContent>
             </Link>
         </Card>
     );
